@@ -1,5 +1,5 @@
 import { useState } from 'react'
-import { BrowserRouter as Router, HashRouter, Route, Routes, Link, Navigate } from 'react-router-dom';
+import { BrowserRouter as Router, Route, Routes, Link, Navigate } from 'react-router-dom';
 import Login from './components/Login';
 import SignUp from './components/Signup';
 import Home from './components/Home';
@@ -18,7 +18,7 @@ function App() {
   };
   return (
     <>
-      <HashRouter>
+      <Router>
         <Routes>
           <Route path='/'  element={<Login onLogin={handleRedirect}/>}/>
           <Route path='/signup' element={<SignUp />}/>
@@ -30,7 +30,7 @@ function App() {
           <Route path='/user-post' element={isLoggedIn ?<UserPosts />: <Navigate to="/" />}/>
           <Route path="/user/:userId" element={isLoggedIn ?<UserProfile />: <Navigate to="/" />} />
         </Routes>
-      </HashRouter>
+      </Router>
     </>
   )
 }
