@@ -1,3 +1,5 @@
+setuptools>=42
+wheel
 absl-py==2.1.0
 aima==2015.4.5
 annotated-types==0.6.0
