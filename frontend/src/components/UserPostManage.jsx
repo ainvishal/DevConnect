@@ -9,7 +9,7 @@ const UserPostManager = ({ postId, title: initialTitle, author, content: initial
   const handleUpdate = async () => {
     const accessToken = localStorage.getItem('accessToken');
     try {
-      const response = await fetch(`http://127.0.0.1:8000/api/posts/${postId}/update/`, {
+      const response = await fetch(`https://devconnectbackend-xfej.onrender.com/api/posts/${postId}/update/`, {
         method: 'PUT',
         headers: {
           'Content-Type': 'application/json',
@@ -33,7 +33,7 @@ const UserPostManager = ({ postId, title: initialTitle, author, content: initial
   const handleDelete = async () => {
     const accessToken = localStorage.getItem('accessToken');
     try {
-      const response = await fetch(`http://127.0.0.1:8000/api/posts/${postId}/delete/`, {
+      const response = await fetch(`https://devconnectbackend-xfej.onrender.com/api/posts/${postId}/delete/`, {
         method: 'DELETE',
         headers: {
           Authorization: `Bearer ${accessToken}`,

@@ -22,7 +22,7 @@ const Profile = () => {
   // Fetch the profile data on component mount
   useEffect(() => {
     const fetchProfile = async () => {
-      const apiUrl = 'http://127.0.0.1:8000/api/user/profile/data'; // Replace with your backend URL
+      const apiUrl = 'https://devconnectbackend-xfej.onrender.com/api/user/profile/data'; // Replace with your backend URL
       try {
         const response = await fetch(apiUrl, {
           method: 'GET',
@@ -66,7 +66,7 @@ const Profile = () => {
     setLoading(true);
     setMessage('');
 
-    const apiUrl = 'http://127.0.0.1:8000/api/user/profile/update'; // Replace with your backend URL
+    const apiUrl = 'https://devconnectbackend-xfej.onrender.com/api/user/profile/update'; // Replace with your backend URL
     
     try {
       const response = await fetch(apiUrl, {

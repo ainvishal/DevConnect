@@ -13,7 +13,7 @@ const UserProfile = () => {
     const accessToken = localStorage.getItem("accessToken");
     try {
       const response = await fetch(
-        `http://127.0.0.1:8000/api/user/${userId}/profile/`,
+        `https://devconnectbackend-xfej.onrender.com/api/user/${userId}/profile/`,
         {
           headers: {
             Authorization: `Bearer ${accessToken}`,
@@ -38,7 +38,7 @@ const UserProfile = () => {
     const accessToken = localStorage.getItem("accessToken");
     try {
       const response = await fetch(
-        `http://127.0.0.1:8000/api/user/${userId}/posts/`, // API endpoint for posts
+        `https://devconnectbackend-xfej.onrender.com/api/user/${userId}/posts/`, // API endpoint for posts
         {
           headers: {
             Authorization: `Bearer ${accessToken}`,
@@ -68,7 +68,7 @@ const UserProfile = () => {
     const accessToken = localStorage.getItem("accessToken");
     try {
       const response = await fetch(
-        `http://127.0.0.1:8000/api/user/${userId}/follow/`,
+        `https://devconnectbackend-xfej.onrender.com/api/user/${userId}/follow/`,
         {
           method: "POST",
           headers: {

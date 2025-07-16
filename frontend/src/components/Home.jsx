@@ -13,7 +13,7 @@ const Home = ({ onSignOut }) => {
         console.error('No refresh token found');
         return;
       }
-      const response = await fetch('http://127.0.0.1:8000/api/user/logout', {
+      const response = await fetch('https://devconnectbackend-xfej.onrender.com/api/user/logout', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',

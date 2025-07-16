@@ -8,7 +8,7 @@ const CommentsModal = ({ postId, onClose }) => {
   // Fetch Comments
   const fetchComments = async () => {
     try {
-      const response = await fetch(`http://127.0.0.1:8000/api/post/${postId}/comments/`);
+      const response = await fetch(`https://devconnectbackend-xfej.onrender.com/api/post/${postId}/comments/`);
       const data = await response.json();
       setComments(data);
     } catch (error) {
@@ -21,7 +21,7 @@ const CommentsModal = ({ postId, onClose }) => {
     const accessToken = localStorage.getItem('accessToken');
     setLoading(true);
     try {
-      const response = await fetch(`http://127.0.0.1:8000/api/post/${postId}/add-comment/`, {
+      const response = await fetch(`https://devconnectbackend-xfej.onrender.com/api/post/${postId}/add-comment/`, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',

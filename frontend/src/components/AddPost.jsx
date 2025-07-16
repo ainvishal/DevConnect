@@ -25,7 +25,7 @@ const AddPost = () => {
     setLoading(true);
     setMessage('');
 
-    const apiUrl = 'http://127.0.0.1:8000/api/posts/'; // Backend URL for creating a post
+    const apiUrl = 'https://devconnectbackend-xfej.onrender.com/api/posts/'; // Backend URL for creating a post
     const accessToken = localStorage.getItem('accessToken');
 
     try {

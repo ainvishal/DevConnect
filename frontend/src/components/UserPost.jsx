@@ -12,7 +12,7 @@ const UserPosts = () => {
     const accessToken = localStorage.getItem('accessToken');  // Get the token from local storage
     
     try {
-      const response = await fetch('http://127.0.0.1:8000/api/posts/user/', {
+      const response = await fetch('https://devconnectbackend-xfej.onrender.com/api/posts/user/', {
         method: 'GET',
         headers: {
           'Authorization': `Bearer ${accessToken}`,  // Send token in the header

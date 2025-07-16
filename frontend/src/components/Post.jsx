@@ -15,7 +15,7 @@ const Post = ({ postId, title, author, content, userId, likes: initialLikes, dis
     const fetchInteractionStatus = async () => {
       const accessToken = localStorage.getItem('accessToken');
       try {
-        const response = await fetch(`http://127.0.0.1:8000/api/post/${postId}/interaction-status/`, {
+        const response = await fetch(`https://devconnectbackend-xfej.onrender.com/api/post/${postId}/interaction-status/`, {
           method: 'GET',
           headers: {
             'Authorization': `Bearer ${accessToken}`,
@@ -41,7 +41,7 @@ const Post = ({ postId, title, author, content, userId, likes: initialLikes, dis
   const handleLike = async () => {
     const accessToken = localStorage.getItem('accessToken');
     try {
-      const response = await fetch(`http://127.0.0.1:8000/api/post/${postId}/like/`, {
+      const response = await fetch(`https://devconnectbackend-xfej.onrender.com/api/post/${postId}/like/`, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -74,7 +74,7 @@ const Post = ({ postId, title, author, content, userId, likes: initialLikes, dis
   const handleDislike = async () => {
     const accessToken = localStorage.getItem('accessToken');
     try {
-      const response = await fetch(`http://127.0.0.1:8000/api/post/${postId}/dislike/`, {
+      const response = await fetch(`https://devconnectbackend-xfej.onrender.com/api/post/${postId}/dislike/`, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',

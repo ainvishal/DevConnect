@@ -10,7 +10,7 @@ const PostsList = () => {
 
   const fetchPosts = async () => {
     try {
-      const response = await fetch('http://127.0.0.1:8000/api/posts/get/', {
+      const response = await fetch('https://devconnectbackend-xfej.onrender.com/api/posts/get/', {
         method: 'GET',
         headers: {
           'Authorization': `Bearer ${localStorage.getItem('accessToken')}`,

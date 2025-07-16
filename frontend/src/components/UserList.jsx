@@ -13,7 +13,7 @@ const UserList = () => {
       const currentUsername = localStorage.getItem('username');
 
       try {
-        const response = await fetch('http://127.0.0.1:8000/api/user/get', { // Adjust URL to your backend endpoint
+        const response = await fetch('https://devconnectbackend-xfej.onrender.com/api/user/get', { // Adjust URL to your backend endpoint
           method: 'GET',
           headers: {
             'Authorization': `Bearer ${accessToken}`,
