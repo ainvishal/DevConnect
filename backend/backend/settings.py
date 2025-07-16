@@ -33,14 +33,9 @@ ALLOWED_HOSTS = [
     '10.0.2.2', 
     '192.168.0.181',
     'devconnectbackend-xfej.onrender.com',
-    'devconnect-frontend-five.vercel.app'
 ]
 
-CORS_ALLOW_CREDENTIALS = True
-
-CORS_ALLOWED_ORIGINS = [
-    "https://devconnect-frontend-five.vercel.app",
-]
+CORS_ALLOW_ALL_ORIGINS = True
 
 
 # Application definition
